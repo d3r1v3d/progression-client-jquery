@@ -1,0 +1,30 @@
+.counter {
+    width: 100%;
+}
+.counter .title, .counter .progression {
+    display: inline;
+    float: left;
+}
+.counter .content {
+    padding: 10px;
+    border-bottom: 1px solid #f9d9ae;
+    font-family: TitilliumText14L600wt, Arial, sans-serif;
+    font-size: 20px;
+    text-shadow: #e9e9e9 2px 1px 0;
+    color: #333;
+}
+.counter .title {
+    width: 66%;
+}
+.counter .title .content {
+    text-align: center;
+}
+.counter .progression {
+    width: 34%;
+}
+.counter .progression .content {
+    text-align: right;
+}
+.counter .progression .content .days {
+    font-weight: bold;
+}
