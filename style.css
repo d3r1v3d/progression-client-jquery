@@ -6,7 +6,7 @@
     display: inline;
     float: left;
 }
-.counter .content {
+.counter .internal {
     padding: 10px;
     font-family: TitilliumText14L600wt, Arial, sans-serif;
     font-size: 20px;
@@ -16,15 +16,15 @@
 .counter .title {
     width: 66%;
 }
-.counter .title .content {
+.counter .title .internal {
     text-align: center;
 }
 .counter .progression {
     width: 34%;
 }
-.counter .progression .content {
+.counter .progression .internal {
     text-align: right;
 }
-.counter .progression .content .days {
+.counter .progression .internal .days {
     font-weight: bold;
 }
