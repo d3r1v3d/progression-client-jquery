@@ -44,13 +44,13 @@
                     for (var ctr = 0; ctr < response.length; ctr++) {
                         var $counter = $(
                             '<div class="counter">'
-                                + '<div class="title"><div class="internal"></div></div>'
+                                + '<div class="label"><div class="internal"></div></div>'
                                 + '<div class="progression"><div class="internal"></div></div>'
                                 + '<div style="clear: both;"></div>'
                             + '</div>'
                         ).appendTo(this);
 
-                        $('.title .internal', $counter).html(response[ctr].title);
+                        $('.label .internal', $counter).html(response[ctr].title);
 
                         // TODO: for now, we're always adding an hour to the target date to ensure DST doesn't kick us back one day earlier.
                         //       however, support for DST really needs to be handled better
