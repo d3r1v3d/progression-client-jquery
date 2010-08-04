@@ -46,11 +46,13 @@
                             '<div class="counter">'
                                 + '<div class="label"><div class="internal"></div></div>'
                                 + '<div class="progression"><div class="internal"></div></div>'
+                                + '<div class="description"><div class="internal"></div></div>'
                                 + '<div style="clear: both;"></div>'
                             + '</div>'
                         ).appendTo(this);
 
                         $('.label .internal', $counter).html(response[ctr].title);
+                        $('.description .internal', $counter).html(response[ctr].description);
 
                         // TODO: for now, we're always adding an hour to the target date to ensure DST doesn't kick us back one day earlier.
                         //       however, support for DST really needs to be handled better
