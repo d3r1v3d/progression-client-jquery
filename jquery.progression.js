@@ -52,7 +52,15 @@
                         ).appendTo(this);
 
                         $('.label .internal', $counter).html(response[ctr].title);
-                        $('.description .internal', $counter).html(response[ctr].description);
+
+                        var description = $.trim(response[ctr].description),
+                            $description = $('.description .internal', $counter);
+                        if (description) {
+                            $description.html(description);
+                        }
+                        else {
+                            $description.hide();
+                        }
 
                         // TODO: for now, we're always adding an hour to the target date to ensure DST doesn't kick us back one day earlier.
                         //       however, support for DST really needs to be handled better
