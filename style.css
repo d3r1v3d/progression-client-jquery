@@ -1,6 +1,8 @@
 .counter {
     width: 100%;
-    border-bottom: 1px solid #f9d9ae;
+    border-top: 1px solid #fdc47a;
+    border-bottom: 1px solid #fdc47a;
+    background-color: #fbe4c5;
 }
 .counter .label, .counter .progression, .counter .description {
     display: inline;
@@ -12,10 +14,6 @@
     font-size: 1.1em;
     text-shadow: #e9e9e9 2px 1px 0;
     color: #333;
-}
-/** The label and progression parent divs need to share a bg colour. */
-.counter .label, .counter .progression {
-    background-color: #fbe4c5;
 }
 .counter .label {
     width: 66%;
@@ -35,6 +33,7 @@
 }
 .counter .description {
     width: 100%;
+    background-color: #fdf0df;
 }
 .counter .description .internal {
     text-align: left;
