@@ -21,7 +21,9 @@
                 minutesRemainder = Math.floor((duration_ms / (60 * 1e3)) % 60),
                 secondsRemainder = Math.floor((duration_ms / 1e3) % 60);
 
-            return '<span class="days">' + daysElapsed + '</span> days' 
+            return '<span class="days"'
+                   + (!daysElapsed ? ' style="color: red;"' : '')
+                   + '>' + daysElapsed + '</span> days' 
                    + (brief ? ''
                             : ', ' + '<span class="hours">' + (hoursRemainder < 10 ? '0' + hoursRemainder : hoursRemainder) + '</span>:' 
                                    + '<span class="minutes">' + (minutesRemainder < 10 ? '0' + minutesRemainder : minutesRemainder) + '</span>:' 
