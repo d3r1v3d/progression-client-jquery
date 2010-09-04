@@ -12,7 +12,11 @@
             if (!brief) brief = false;
 
             var duration_ms = endDate.getTime() - startDate.getTime(),
-                daysElapsed = Math.floor(duration_ms / (24 * 60 * 60 * 1e3)),
+                isCountingDown = duration_ms < 0;
+            
+            duration_ms = Math.abs(duration_ms);
+
+            var daysElapsed = Math.floor(duration_ms / (24 * 60 * 60 * 1e3)),
                 hoursRemainder = Math.floor((duration_ms / (60 * 60 * 1e3)) % 24),
                 minutesRemainder = Math.floor((duration_ms / (60 * 1e3)) % 60),
                 secondsRemainder = Math.floor((duration_ms / 1e3) % 60);
@@ -21,7 +25,8 @@
                    + (brief ? ''
                             : ', ' + '<span class="hours">' + (hoursRemainder < 10 ? '0' + hoursRemainder : hoursRemainder) + '</span>:' 
                                    + '<span class="minutes">' + (minutesRemainder < 10 ? '0' + minutesRemainder : minutesRemainder) + '</span>:' 
-                                   + '<span class="seconds">' + (secondsRemainder < 10 ? '0' + secondsRemainder : secondsRemainder) + '</span>');
+                                   + '<span class="seconds">' + (secondsRemainder < 10 ? '0' + secondsRemainder : secondsRemainder) + '</span>')
+                   + (isCountingDown ? ' to go' : ' so far');
         };
 
         if (userOptions) $.extend(opts, userOptions);
